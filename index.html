@@ -1,43 +1,108 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<title>
-			CSE PROJECT SO LIT!
-		</title>
-		
-	</head>
-	<body>
-	<h1>	
-	Joseph P. Edralin is mad scrubby.	
-	</h1>
-	<p> It's going to kick us in the foot</p>
-	<h2>
-	I ran out of things to say.
-	</h2>
-	<p>lololol
-	</p>
-	<h3>
-	JP is a dirty acronym
-	</h3>
-	<p>
-	LMAO THIS CODE IS SO MONOTONOUS!!!
-	</p>
-	<h4>
-	Hello
-	</h4>
-	<p>~JP Edralin 2015</p>
-	<h5>
-	JIP is an even dirtier acronym.
-	</h5>
-	<p>
-	Urban Dictionary is quite interesting.
-	</p>
-	<h6>
-	SO SMALL
-	</h6>
-	<p>
-	GOOD BYE!
-	</p>
-	</body>
+<style>
+body {background-color: #8FD8D8}
+h1 {color:red}
+ul {
+	font-size:150%;
+	font-family: arial;
+}
+.redparagraph {
+	color:blue; 
+	height:200px;
+	background-color:gray; 
+	width:200px;
+	font-family: arial;
+	transition:height 500ms ease;
+} 
+//you need a "." for class names in css
+</style>
+
+<h1>
+Learning JS
+</h1>
+
+<ul>
+  <li onclick="changewid();dropdis();">HTHS TSA</li>
+  <li>Drones</li>
+  <li>About</li>
+</ul>
+
+<script>
+
+function add() {
+//alert('this is a test');
+var fn=document.getElementById('myHeader');
+alert(fn.value);
+var fn2=document.getElementById('myHeader2');
+alert(fn2.value);
+var math = parseInt(fn.value, 10) + parseInt(fn2.value, 10);
+alert(math);
+}
+
+function showhide() 
+{
+var div = document.getElementById("correct");
+if (div.style.display !== "none") 
+{
+    div.style.display = "none";
+}
+else 
+{
+    div.style.display = "block";
+}
+ }
+
+ 
+function changewid()
+{
+var div2 = document.getElementById("correct");
+if (div2.style.height != "50px")
+{
+    div2.style.height = "50px";
+}
+else
+{
+     div2.style.height = "200px";
+}
+ }
+
+function dropdis() 
+{
+var diva = document.getElementById("myHeader");
+var divb = document.getElementById("myHeader2");
+if (diva.style.display !== "none") and (divb.style.display !== "none")
+{
+    diva.style.display = "none" and divb.style.display = "none";
+}
+else 
+{
+    diva.style.display = "block" and divb.style.display = "block";
+}
+ }
+
+
+</script>
+
+<body>
+
+<div id="correct" class="redparagraph">
+<p>
+This is a paragraph.
+</p>
+<input type="text" name="fname" id="myHeader"><br>
+<input type="text" name="f2name" id="myHeader2"><br>
+<button type="button" onclick="add()">Click Me!</button><br>
+</div>
+
+<div id="next">
+<button type="button" onclick="showhide()">Click Me!</button>
+</div>
+
+</body>
+
+
+
+</html>
 </html>
