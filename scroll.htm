@@ -60,12 +60,12 @@ ul li a {
 
 .panel {
     width: 100%;
-    height: 1000px;
+    height: 100%;
     z-index:0; 
     -webkit-transform: translateZ( 0 );
     transform: translateZ( 0 );
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    transition: transform 0.6s ease-in-out;
+    -webkit-transition: -webkit-transform 0.9s ease-in-out;
+    transition: transform 0.9s ease-in-out;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
@@ -93,12 +93,12 @@ a[ id= "HTHSTSA" ]:target ~ #main article.panel {
 }
 
 a[ id= "UASTechnology" ]:target ~ #main article.panel {
-    -webkit-transform: translateY( -1000px );
-    transform: translateY( -1000px );
+    -webkit-transform: translateY( -100% );
+    transform: translateY( -100% );
 }
 a[ id= "About" ]:target ~ #main article.panel {
-    -webkit-transform: translateY( -2000px );
-    transform: translateY( -2000px );
+    -webkit-transform: translateY( -200% );
+    transform: translateY( -200% );
 }
 </style>
 
