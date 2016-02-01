@@ -1,0 +1,190 @@
+<html>
+
+<style>
+
+html, body{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#myHeader2{
+  position:fixed;
+  width:8%;
+  height:100%;
+  left:0;
+  top:0;
+  background-color:black;
+  font-family:"Gibson W01",sans-serif;
+  color:white;
+}
+
+#drawer {
+  position:fixed;
+  top:0;
+  left:8%;
+  height:100%;
+  width:0%;
+  overflow:hidden;
+  transition:width 1s ease;
+  margin:0;
+  padding:0;
+  background-color:#181818;
+  z-index:94;
+  font-family:"Gibson W01",sans-serif;
+  white-space:nowrap;
+/*  overflow-y:scroll;*/
+}
+
+.panel{
+  top:0;
+  right:0;
+  width:100%;
+  height:100%;
+  z-index:2;
+  font-family:"Gibson W01",sans-serif;
+}
+
+#list1 {
+  position:absolute;
+  line-height: 7;
+  left:-17%;
+  height:6%;
+  width: 100%; 
+  margin: 0;
+  text-decoration:none; 
+}
+
+
+/*ul li {
+    position:relative;
+    display: block; 
+    width:295%;
+    line-height: 5;
+    float:left;
+    left:90px;
+    text-align: center;
+    font-family:"Trebuchet MS";
+    margin:0;
+    padding:0;
+    z-index:100;
+}*/
+
+#list1 li {
+  background-color:#181818;
+}
+#list1 li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration:none; 
+}
+
+
+#list1 li:hover {
+    background-color: #3d3d3d;
+    -webkit-box-shadow: 0 0 18px #3d3d3d;
+    font-weight:bold;
+}
+
+#selec{
+    font-family:"Gibson W01",sans-serif;
+    text-decoration:none;
+    line-height: 3;
+    list-style-type: none;
+    color:white;
+}
+
+#selec li a{
+    color:white;
+    list-style-type:none;
+    text-decoration:none;
+}
+
+#selec li:hover{
+    font-weight:bold;
+}
+
+
+</style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("a").click(function(){
+  $('html, body').animate({
+             scrollTop: $( $(this).attr('href') ).offset().top
+         }, 800);
+  return false;
+    });
+});
+
+function dropdis2() {
+var diva = document.getElementById("drawer");
+if (diva.style.width !== "0%")
+{
+    diva.style.width = "0%";
+}
+else 
+{
+    diva.style.width = "12%";
+}
+ }
+
+</script>
+
+
+
+<body>
+   <div id="myHeader2">
+    <button type="button" onclick="dropdis2()">Click Me!</button><br>
+      <ul id="selec">
+        <li><a href="#">HTHS-STEM</a></li>
+        <li><a href="#">HTHS-TSA</a></li>
+        <li><a href="#">UAV Tech</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+  </div>
+
+  <div id='drawer'>
+    <ul id="list1">
+        <li><a href="#Commercial">Commercial</a></li>
+        <li><a href="#Educational">Educational</a></li>
+        <li><a href="#Research">Research</a></li>
+        <li><a href="#CTechnology">Current Technology</a></li>
+        <li><a href="#SafetyConcerns">Safety Concerns</a></li>
+        <li><a href="#Future">Future Tech/Uses</a></li>
+    </ul>
+  </div>
+
+
+<!-- panels that scroll as you click links at the top -->
+<a name="Commercial" id="Commercial"></a>
+<div class="panel" style="background-color:#ADD8E6">
+</div>
+
+<a name="Educational" id="Educational"></a>
+<div class="panel" style="background-color:#99FF00">
+</div>
+
+<a name="Research" id="Research"></a>
+<div class="panel" style="background-color:#ffb6c1">
+</div>
+
+<a name="CTechnology" id="CTechnology"></a>
+<div class="panel" style="background-color:#ffd700">
+</div>
+
+<a name="SafetyConcerns" id="SafetyConcerns"></a>
+<div class="panel" style="background-color:#b19cd9">
+</div>
+
+<a name="Future" id="Future"></a>
+<div class="panel" style="background-color:#f4a460">
+</div>
+
+
+</body>
+
+
+</html>
