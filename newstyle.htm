@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="design2.css">
+
+
+
+<!--Allows the div's to scroll-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("a").click(function(){
+	$('html, body').animate({
+             scrollTop: $( $(this).attr('href') ).offset().top
+         }, 800);
+	return false;
+    });
+});
+</script>
+
+
+</head>
+<body>
+
+<!-- Header -->
+<div id="header" style="position:fixed">
+	<h1>
+    <a href='homepage5.html'>
+        <span class="expeditio">TSA WEBMASTER 2016</span> <!-- separates the first portion of the logo for red coloring -->
+    </a>
+    </h1>
+</div>
+
+<div id="selection" style="position:fixed">
+    <br>
+	<ul>
+        <a href="#"><li>HTHS STEM</li></a>
+		<a href="#"><li>HTHS TSA</li></a>
+		<a href="#"><li>UAV TECH</li></a>
+		<a href="#"><li>ABOUT US</li></a>
+	</ul>
+</div>
+
+<!-- panels that scroll as you click links at the top -->
+<a name="RoutePlanner" id="RoutePlanner"></a>
+<div class="panel">
+    <iframe src="http://www.hths.mcvsd.org" style="position:relative;height:93%;width:88%;top:4%; left:8%"></iframe>
+    <div id="boxx">
+    </div>
+</div>
+
+<!-- Panels for brief description of each service -->
+<a name="TravelStops" id="TravelStops"></a>
+<div class="panel">
+    <iframe src="http://www.tsaweb.org" style="position:relative;height:93%;width:88%;top:4%; left:8%"></iframe>
+    <div id="boxx">
+    </div>
+</div>
+
+<a name="Itinerary" id="Itinerary"></a>
+<div class="panel">
+    <iframe src="http://www.uastec.com/" style="position:relative;height:93%;width:88%;top:4%; left:8%"></iframe>
+    <div id="boxx">
+    </div>
+</div>
+
+<a name="AboutUs" id="AboutUs"></a>
+<div class="panel">
+    <iframe src="https://www.mcvsd.org/" style="position:relative;height:93%;width:88%;top:4%; left:8%"></iframe>
+    <div id="boxx">
+    </div>
+</div>
+
+<!-- circle links to each panel -->
+<a href='#RoutePlanner' id="Route Planner" class="anchorLink">
+    <div class='circle' style='top:250px'> </div>
+</a>
+
+<a href="#TravelStops" id="Travel Stops" class="anchorLink">
+    <div class='circle' style='top:330px'> </div>
+</a>
+
+<a href="#Itinerary" id="Itineraryy" class="anchorLink">
+    <div class='circle' style='top:410px'> </div>
+</a>
+
+<a href="#AboutUs" id="About Us" class="anchorLink">
+    <div class='circle' style='top:490px'> </div>
+</a>
+
+</body>
+
+</html>
